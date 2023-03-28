@@ -6,9 +6,7 @@ import useFetch from '../hooks/useFetch';
 function Homepage() {
   const { user } = useContext(AuthContext);
 
-  const { result: characters, error, loading } = useFetch('https://rickandmortyapi.com/api/character', 'mc');
-
-
+  const { result: characters, error, loading } = useFetch('https://api.sampleapis.com/futurama/characters/', 'mc');
 
   // const [characters, setCharacters] = useState([]);
 
@@ -32,11 +30,13 @@ function Homepage() {
       <h1>Home Page</h1>
       <h2>All Characters:</h2>
       { loading && <p>Loading....</p> }
-      { error && <p>Something went wrong.. check console.</p> }
+      {error && <p>Something went wrong.. check console.</p>}
+      
       { characters && characters.map((c) => {
         return <div key={c.id}>
-          <h3>{c.name}</h3>
-          { user && <Link to={`details/${c.id}/${c.name}`} >Learn more..</Link> }
+         { console.log('c :', c)}
+          <h3>{c.name.first}</h3>
+          { user && <Link to={`details/${c.id}/`} >Learn more..</Link> }
           
         </div>
       }) }

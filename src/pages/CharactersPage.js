@@ -1,16 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../contexts/AuthContext'
-import EpiCards from '../components/Epicard';
+import CharacterCard from '../components/CharacterCard'
+import Card from '../components/Card';
+import Cards from '../components/Card';
 import useFetch from '../hooks/useFetch';
 
-function Episodes() {
+function CharactersPage() {
   // const values = useContext(AuthContext);
   // const user = values.user;
   // const test = values.test;
   // const [characters, setCharacters] = useState(null);
   const [errores, setErrores] = useState(null);
   const [show, setShow] = useState(false);
-  let [url, setUrl] = useState(`https://api.sampleapis.com/futurama/episodes`);
+  let [url, setUrl] = useState(`https://api.sampleapis.com/futurama/characters`);
 
 
   //   const FilteredCards = characters?.filter((character) => {
@@ -34,23 +36,19 @@ function Episodes() {
   //   fetchData(url);
   //     }, [url]);
 
-  const { result: characters, error, loading } = useFetch('https://api.sampleapis.com/futurama/episodes/', 'sc');
+  const { result: characters, error, loading } = useFetch('https://api.sampleapis.com/futurama/characters/', 'sc');
   const {user} = useContext(AuthContext);
 
   return (
 
     <div>
-    <div>
-      <h1>Episodes</h1>
-    </div>
+        
 
           <div className="CardContainer">
         {characters && characters.map((character) => {
-      console.log("hola");
           return (
             // <CharacterCard character={character} setShow={setShow} />
-            
-            <EpiCards results={character}/>
+            <Cards results={character} type={"character"} />
           )
         }
       )
@@ -64,4 +62,4 @@ function Episodes() {
   )
 }
 
-export default Episodes
+export default CharactersPage

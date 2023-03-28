@@ -4,7 +4,7 @@ import Homepage from './pages/Homepage'
 import Show from './pages/Show'
 import Error404 from './pages/Error404'
 import NavBar from './components/NavBar'
-import Characters from './pages/Characters'
+import CharactersPage from './pages/CharactersPage'
 import Episodes from './pages/Episodes'
 import CharDetails from './pages/CharDetails'
 import { AuthContextProvider } from './contexts/AuthContext'
@@ -25,12 +25,12 @@ function App() {
 
           <Route path='/Show' element={<ProtectedRoute>  <Show/> </ProtectedRoute> } >
 
-            <Route path='Characters' element={<Characters />} />
+            <Route path='CharactersPage' element={<CharactersPage />} />
             <Route path='Episodes' element={ <Episodes /> } />
             
           </Route>
 
-          <Route path='details/:id/:name' element={ <ProtectedRoute><CharDetails /></ProtectedRoute> } />
+          <Route path='details/:id' element={ <ProtectedRoute><CharDetails /></ProtectedRoute> } />
 
           <Route path='login' element={ <Login /> } />
 

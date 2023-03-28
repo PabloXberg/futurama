@@ -3,13 +3,13 @@ import { useParams } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 
 function CharDetails() {
-  // const params = useParams();
-  // console.log("params:", params)
+  const params = useParams();
+  console.log("params:", params)
 
   const { id } = useParams();
   // console.log("only id", id);
 
-  const { result: character, error, loading } = useFetch(`https://rickandmortyapi.com/api/character/${id}`, 'sc');
+  const { result: character, error, loading } = useFetch(`https://api.sampleapis.com/futurama/characters/${id}`, 'sc');
 
   // const [character, setCharacter] = useState(null);
   // const [loading, setLoading] = useState(true);
@@ -47,13 +47,13 @@ function CharDetails() {
   
   return (
     <div>
-      <h1>Details about {character ? character.name : 'Nobody'}</h1>
+      <h1>Details about {character ? character.name[0,1,2] : 'Nobody'}</h1>
 
       { loading && <p>Loading...</p> }
 
       { error && <p>{error}</p>}
 
-      { character && <img src={character.image} alt={`Picture of ${character.name}`} /> }
+      { character && <img src={character.images.main} alt={`Picture of ${character.name.first}`} /> }
 
 
 

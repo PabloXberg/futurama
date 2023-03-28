@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { AuthContext } from '../contexts/AuthContext';
+import { AuthContext} from '../contexts/AuthContext';
 
 function NavBar({ demoUser, setDemoUser }) {
   const location = useLocation();
@@ -24,7 +24,7 @@ function NavBar({ demoUser, setDemoUser }) {
           { location.pathname.includes("Show") ? 
             <>
               - 
-              <NavLink to='/Show/Characters' style={({ isActive }) => isActive ? linkStyle : null }>Characters</NavLink>
+              <NavLink to='/Show/CharactersPage' style={({ isActive }) => isActive ? linkStyle : null }>Characters</NavLink>
               <NavLink to='/Show/Episodes' style={({ isActive }) => isActive ? linkStyle : null }>Episodes</NavLink>
             </> 
           : null }

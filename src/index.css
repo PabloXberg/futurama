@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,3 +11,253 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+body {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: black;
+}
+
+.NavBar {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  flex-direction: row;
+  position: auto;
+  height: 200px;
+  width: 100%;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 45px 0px green;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 200, 0, 1);
+  border-radius: 50%;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+
+
+.flip-card-front img {
+  background-color: #bbb;
+  color: black;
+  border-radius: 50%;
+
+}
+
+.flip-card-back {
+  position: relative;
+  text-align: center;
+  color: green;
+  transform: rotateX(180deg);
+
+}
+*/
+.CardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+}
+
+ .cardcontainer img {
+  height: 10rem;
+  width: auto;
+
+  border: solid 3px white;
+
+} /*
+
+.gris {
+
+  position: relative;
+  filter: grayscale(100%);
+  scale: 1.35;
+  border-radius: 50%;
+  box-shadow: 0px 0px 200px 0px white;
+
+}
+
+.text {
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  scale: 1.8;
+}
+
+.Logo {
+  grid-row: 1;
+  grid-column: 2;
+  display: grid;
+  place-items: center;
+}
+
+.inputDiv {
+  display: grid;
+  place-items: center;
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.headerLogo {
+  border-radius: 0%;
+  height: 100px;
+  width: 50%;
+  border: none;
+}
+
+.headerLogo:hover {
+  transform: rotateY(180deg);
+
+  transition: transform 3s;
+  transform-style: preserve-3d;
+
+}
+
+.animation {
+  grid-row: 1;
+  grid-column: 1;
+  display: grid;
+  place-items: left;
+}
+
+iframe {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.modal-container {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.733);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px green;
+}
+
+.modal-content {
+  width: 400px;
+  height: 650px;
+  background-color: #fff;
+  border: solid 3px orange;
+  border-radius: 20px;
+  align-items: center;
+  justify-self: center;
+  padding-top: 2%;
+  box-shadow: 10px;
+  box-shadow: 10px green;
+}
+
+.modal-header,
+.modal-footer {
+  padding: 10px;
+  font-size: 20px;
+  box-shadow: 10px green;
+}
+
+.modal-picture {
+  box-shadow: 20%;
+  width: 100%;
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 10px green;
+  justify-self: center;
+
+}
+
+.modal-title {
+  margin: 0;
+}
+
+
+.modal-close-btn {
+  color: white;
+  background-color: black;
+  width: 100px;
+  height: 40px;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.modal-close-btn:hover {
+  background-color: red;
+  transition: 1s;
+}
+
+h1 {
+  font-size: xx-large;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  color: white;
+
+}
+
+#pagination {
+  width: 100%;
+  padding-left: 40%;
+  padding-right: 40%;
+  display: -moz-grid-line;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.text h1 {
+  color: darkblue;
+}
+
+.slidepx {
+  border-radius: 0%;
+}
+*/
+ .card {
+    border: 2px solid #0b5ed7;
+    border-radius: 5%;
+
+ }/*
+
+ .content {
+     padding: 10px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+img:hover {
+
+  scale: 1.15;
+}
+
+ */
