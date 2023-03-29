@@ -8,27 +8,37 @@ import CardDetails from "./CardDetails";
 
 
 function epiCards({ results }) {
-  console.log('bla bla bl abla#', results);
+
 
   return (
   
-        <div>
+    <Link
+      style={{ textDecoration: "none" }}
+          // to={`/details/${results.id}`}
+          key={results.id}
+          className="position-relative text-dark"
+          >
       <Card style={{ width: '18rem' }}>
-
-          
-      <Card.Body>
+       
+      <Card.Body className="">
         <Card.Title>{`${results.title}`}</Card.Title>
-          <Card.Text>
-            {`Writers: ${results.writers}`}
+          <Card.Subtitle>
+            {`Writers: ${results.writers}`}                       
+          </Card.Subtitle><br/>
+           <Card.Text>
+            {`Description: ${results.desc}`}                         
+          </Card.Text>
+           <Card.Header>
             {`Air Date: ${results.originalAirDate}`}
-            {`Description: ${results.originalAirDate}`}
+          </Card.Header>
+           <Card.Footer>
             {`Number: ${results.number}`}
-        </Card.Text>
+          </Card.Footer>
      
       </Card.Body>
       </Card>
 
-    </div>
+    </Link>
   );
 }
 

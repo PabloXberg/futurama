@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
+import male from '../images/malemidle.png' 
+import female  from '../images/femalesmall.png' 
 
 function CharDetails() {
   const params = useParams();
@@ -46,23 +48,37 @@ function CharDetails() {
   // }
   
   return (
-    <div>
-      <h1>Details about {character ? character.name[0,1,2] : 'Nobody'}</h1>
+    <div className="detailscontainer">
+      <h1>{character ? `${character.name.first} ${character.name.middle} ${character.name.last}` : 'loading...'}</h1>
 
       { loading && <p>Loading...</p> }
 
-      { error && <p>{error}</p>}
+      {error && <p>{error}</p>}
+      
+      <div className="modalcontent">
 
-      { character && <img src={character.images.main} alt={`Picture of ${character.name.first}`} /> }
+            {character && <img src={character.images.main} alt={`Picture of ${character.name.first}`} />}
+            {/* {character.gender ? console.log('character.gender :>> ', character.gender) : null} */}
+          
+              
+            
+            {character && <p><b>Age: </b><i> {character.age}</i></p>}
+
+            
+            {/* {(() => {                     //    TRYING TO PUT AN IMAGE DEPENDING ON DE GENDER
+              if (character.gender && character.gender === "Female") { return <div className={`gender position-absolute`} ><img className={`genderStyle img-fluid`} src={female} alt="" /> </div>; }
+              else if (character.gender && character.gender === "Male") { return <div className={`gender position-absolute`} > <img className={`genderStyle img-fluid`} alt="Male" src={male} /> </div>; }
+              else {return null }
+            })()} */}
+            
+
+            {character && <p><b>Gender: </b><i> {character.gender}</i></p>}
+            {character && <p><b>Species: </b><i>{character.species}</i></p>}
+            { character && <p><b>Occupation:</b><i> {character.occupation}</i></p>}
+            { character && <p><b>Home Planet: </b><i>{character.homePlanet}</i></p>}
 
 
-
-
-
-
-
-      {/* <p>{name}</p>
-      <input onChange={handleChange}/> */}
+       </div>
 
     </div>
   )

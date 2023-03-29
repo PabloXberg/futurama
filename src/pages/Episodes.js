@@ -8,9 +8,9 @@ function Episodes() {
   // const user = values.user;
   // const test = values.test;
   // const [characters, setCharacters] = useState(null);
-  const [errores, setErrores] = useState(null);
-  const [show, setShow] = useState(false);
-  let [url, setUrl] = useState(`https://api.sampleapis.com/futurama/episodes`);
+  // const [errores, setErrores] = useState(null);
+  // const [show, setShow] = useState(false);
+  // let [url, setUrl] = useState(`https://api.sampleapis.com/futurama/episodes`);
 
 
   //   const FilteredCards = characters?.filter((character) => {
@@ -40,26 +40,17 @@ function Episodes() {
   return (
 
     <div>
-    <div>
-      <h1>Episodes</h1>
-    </div>
-
-          <div className="CardContainer">
-        {characters && characters.map((character) => {
-      console.log("hola");
+        <div className="EpiCardContainer">
+          {characters && characters.map((character) => {
+          
           return (
             // <CharacterCard character={character} setShow={setShow} />
-            
             <EpiCards results={character}/>
           )
         }
       )
 }
-</div>
-      
-
-
-      
+      </div>
     </div>
   )
 }
