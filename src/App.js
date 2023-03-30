@@ -10,6 +10,7 @@ import CharDetails from './pages/CharDetails'
 import { AuthContextProvider } from './contexts/AuthContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import Login from './pages/Login'
+import Chat from './pages/Chat'
 
 function App() {
   const [demoUser, setDemoUser] = useState({ email: "demo@email.com", username: "Demoman"});
@@ -21,13 +22,13 @@ function App() {
 
           <Route path='/' element={ <Homepage /> } />
 
-          <Route path='*' element={ <Error404 /> } />
+          <Route path='*' element={<Error404 />} />
+          
+          <Route path='/Chat' element={<ProtectedRoute>  <Chat/> </ProtectedRoute> } ></Route>
 
           <Route path='/Show' element={<ProtectedRoute>  <Show/> </ProtectedRoute> } >
-
-            <Route path='CharactersPage' element={<CharactersPage />} />
-            <Route path='Episodes' element={ <Episodes /> } />
-            
+                <Route path='CharactersPage' element={<CharactersPage />} />
+                <Route path='Episodes' element={ <Episodes /> } /> 
           </Route>
 
           <Route path='details/:id' element={ <ProtectedRoute><CharDetails /></ProtectedRoute> } />

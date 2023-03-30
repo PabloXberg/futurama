@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../contexts/AuthContext'
-import CharacterCard from '../components/CharacterCard'
+
 import Card from '../components/Card';
 import Cards from '../components/Card';
 import useFetch from '../hooks/useFetch';

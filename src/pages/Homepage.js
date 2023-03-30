@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContext';
 import useFetch from '../hooks/useFetch';
+import theQuiz from '../components/theQuiz'
 
 function Homepage() {
   const { user } = useContext(AuthContext);
@@ -27,19 +28,8 @@ function Homepage() {
   
   return (
     <div>
-      <h1>Home Page</h1>
-      <h2>All Characters:</h2>
-      { loading && <p>Loading....</p> }
-      {error && <p>Something went wrong.. check console.</p>}
-      
-      { characters && characters.map((c) => {
-        return <div key={c.id}>
-         { console.log('c :', c)}
-          <h3>{c.name.first}</h3>
-          { user && <Link to={`details/${c.id}/`} >Learn more..</Link> }
-          
-        </div>
-      }) }
+ 
+     <theQuiz />
       
     </div>
   )
