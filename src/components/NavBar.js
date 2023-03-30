@@ -10,7 +10,7 @@ function NavBar({ demoUser, setDemoUser }) {
     fontSize: "large",
     font: "strong",
     cursor: "pointer",
-    scale: 1.9
+    scale: 3
     
   }
 
