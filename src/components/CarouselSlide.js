@@ -7,8 +7,6 @@ import Slide3 from '../images/493497.jpg'
 function CarouselSlide(Info) {
 
 
-
-
   if (Info) {
                                            // console.log('Info :>> ', Info);
 

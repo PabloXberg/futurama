@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Homepage from './pages/Homepage'
+import Homepage from './Homepage'
 import Show from './pages/Show'
 import Error404 from './pages/Error404'
 import NavBar from './components/NavBar'
