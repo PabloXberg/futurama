@@ -14,6 +14,7 @@ function HomepageQuiz() {
   const [vidas, setVidas] = useState(3);
   const [tiemporestante, setTiempoRestante] = useState(10);
   const [aredisabled, setAreDisabled] = useState(false);
+  const [buttonStyle, setButtonStyle] = useState("");
   
   const preguntas = characters;
   
@@ -30,7 +31,7 @@ function HomepageQuiz() {
     console.log('e :>> ', e);
     console.log('puntuacion :>> ', puntuacion);
     console.log('vidas :>> ', vidas);
-    // e.target.classlist.add(correctAnswer === respuesta ? "correct" : "incorrect");   // NEED TO ADD TO THE CLASSLIST!!!!!!!!
+     correctAnswer === respuesta ? setButtonStyle("correct") : setButtonStyle("incorrect");   // NEED TO ADD TO THE CLASSLIST!!!!!!!!
   //next
     setTimeout(() => {
     if (preguntaActual === preguntas.length - 1 || vidas <= 0 || vidas === 0) {setIsFinished(true);}
@@ -92,6 +93,7 @@ function HomepageQuiz() {
               {preguntas && preguntas[preguntaActual].possibleAnswers.map((respuesta) => (
                 <button
                   disabled={aredisabled}
+                  className={buttonStyle}
                   key={respuesta}
                   onClick={(e) => handleAnswerSubmit(e, preguntas[preguntaActual].correctAnswer, respuesta)}>{respuesta}</button>
                 )

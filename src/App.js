@@ -24,11 +24,12 @@ function App() {
 
           <Route path='*' element={<Error404 />} />
           
-          <Route path='/Chat' element={<ProtectedRoute>  <Chat/> </ProtectedRoute> } ></Route>
+          
 
           <Route path='/Show' element={<ProtectedRoute>  <Show/> </ProtectedRoute> } >
                 <Route path='CharactersPage' element={<CharactersPage />} />
-                <Route path='Episodes' element={ <Episodes /> } /> 
+                <Route path='Episodes' element={<Episodes />} /> 
+                <Route path='Chat' element={ <Chat/> } />
           </Route>
 
           <Route path='details/:id' element={ <ProtectedRoute><CharDetails /></ProtectedRoute> } />

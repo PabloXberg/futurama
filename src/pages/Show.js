@@ -14,7 +14,7 @@ function Show() {
     <div>
       { location.pathname.includes("Characters") || location.pathname.includes("Episodes") ? <Outlet /> : 
       <>
-          <CarouselSlide Info={ characters ? characters[0] : null} />
+          {characters && <CarouselSlide Info={characters[0]} /> }
       </>
       }
     </div>

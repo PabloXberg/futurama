@@ -10,16 +10,16 @@ function CarouselSlide(Info) {
   if (Info) {
                                            // console.log('Info :>> ', Info);
 
-    // let stringCompleto = Info.Info.synopsis;
-    // const longitudTrozo = 406;
-    // const arrayDeTrozos = [];
+    let stringCompleto = Info.Info.synopsis;
+    const longitudTrozo = 406;
+    const arrayDeTrozos = [];
                                          // console.log('stringCompleto :>> ', stringCompleto);
 
 
-//     for (let i = 0; i < stringCompleto.length; i += longitudTrozo) {
-//         const trozo = stringCompleto.substring(i, i + longitudTrozo);
-//         arrayDeTrozos.push(trozo);
-// }
+    for (let i = 0; i < stringCompleto.length; i += longitudTrozo) {
+        const trozo = stringCompleto.substring(i, i + longitudTrozo);
+        arrayDeTrozos.push(trozo);
+}
 
                                        // console.log('Info.synopsis :>> ', Info.Info.synopsis);
     return (
@@ -31,8 +31,8 @@ function CarouselSlide(Info) {
             alt="First slide"
           />
           <Carousel.Caption>
-            {/* <h1>Synopsis</h1>
-            <h4>{arrayDeTrozos[1]}</h4> */}
+            <h1>Synopsis</h1>
+            <h4>{arrayDeTrozos[1]}</h4>
             {/* <h3>{Info.Info.synopsis}</h3> */}
           </Carousel.Caption>
         </Carousel.Item>
@@ -44,8 +44,8 @@ function CarouselSlide(Info) {
           />
 
           <Carousel.Caption>
-            {/* <h1>Creators: {Info.Info.creators[0].name} & {Info.Info.creators[1].name}</h1>
-            <h4>{arrayDeTrozos[1]}</h4> */}
+            <h1>Creators: {Info.Info.creators[0].name} & {Info.Info.creators[1].name}</h1>
+            <h4>{arrayDeTrozos[1]}</h4>
             {/* <h3>{Info.Info.synopsis}</h3> */}
           </Carousel.Caption>
         </Carousel.Item>
@@ -57,8 +57,8 @@ function CarouselSlide(Info) {
           />
 
           <Carousel.Caption>
-            {/* <h1>Futurama was on TV between {Info.Info.yearsAired}</h1>
-           <h4>{arrayDeTrozos[2]}</h4> */}
+            <h1>Futurama was on TV between {Info.Info.yearsAired}</h1>
+           <h4>{arrayDeTrozos[2]}</h4>
             {/* <h3>{Info.Info.synopsis}</h3> */}
           </Carousel.Caption>
         </Carousel.Item>

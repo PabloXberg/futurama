@@ -47,22 +47,16 @@ function NavBar({ demoUser, setDemoUser }) {
         >
           <div className="navbar-nav fs-5">
 
-               <NavLink
-              activeClassName="inactive"
-              className="nav-link"
-              to="/"
-              style={({ isActive }) => isActive ? linkStyleOn : linkStyleOff }
-            >
-              Chat
-            </NavLink>
+            
 
             <NavLink to='/Show' className="nav-link"  style={({ isActive }) => isActive ? linkStyleOn :linkStyleOff }>The Show</NavLink>
     
                   { location.pathname.includes("Show") ? 
                   <>
-                    - 
+                    
                     <NavLink to='/Show/CharactersPage' className="nav-link " style={({ isActive }) => isActive ? linkStyleOn : linkStyleOff }>Characters</NavLink>
-                    <NavLink to='/Show/Episodes' className="nav-link "  style={({ isActive }) => isActive ? linkStyleOn : linkStyleOff }>Episodes</NavLink>
+                    <NavLink to='/Show/Episodes' className="nav-link " style={({ isActive }) => isActive ? linkStyleOn : linkStyleOff}>Episodes</NavLink>
+                    <NavLink activeClassName="inactive" className="nav-link" to="/Show/Chat" style={({ isActive }) => isActive ? linkStyleOn : linkStyleOff }>Chat</NavLink>
                   </> 
                 : null }
 
