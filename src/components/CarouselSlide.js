@@ -32,8 +32,7 @@ function CarouselSlide(Info) {
           />
           <Carousel.Caption>
             <h1>Synopsis</h1>
-            <h4>{arrayDeTrozos[1]}</h4>
-            {/* <h3>{Info.Info.synopsis}</h3> */}
+            <h5>{arrayDeTrozos[0]}</h5>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -45,9 +44,8 @@ function CarouselSlide(Info) {
 
           <Carousel.Caption>
             <h1>Creators: {Info.Info.creators[0].name} & {Info.Info.creators[1].name}</h1>
-            <h4>{arrayDeTrozos[1]}</h4>
-            {/* <h3>{Info.Info.synopsis}</h3> */}
-          </Carousel.Caption>
+            <h5>{arrayDeTrozos[1]}</h5>
+           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -55,11 +53,9 @@ function CarouselSlide(Info) {
             src={Slide3}
             alt="Third slide"
           />
-
           <Carousel.Caption>
             <h1>Futurama was on TV between {Info.Info.yearsAired}</h1>
-           <h4>{arrayDeTrozos[2]}</h4>
-            {/* <h3>{Info.Info.synopsis}</h3> */}
+           <h5>{arrayDeTrozos[2]}</h5>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

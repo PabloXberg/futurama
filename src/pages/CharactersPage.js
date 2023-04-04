@@ -15,27 +15,6 @@ function CharactersPage() {
   let [url, setUrl] = useState(`https://api.sampleapis.com/futurama/characters`);
 
 
-  //   const FilteredCards = characters?.filter((character) => {
-  //   return character.name.toLocaleLowerCase().includes(searchInput .toLocaleLowerCase());
-  // });
-
-  //    async function fetchData(url) {
-  //   try {
-  //         const response = await fetch(url);
-  //         const result = await response.json();
-  //         console.log('result :>> ', result);
-  //         setCharacters(result);
-  //         setErrores(null)
-  // } catch (error) {
-  //         setErrores(error.message);
-  //         alert(errores)
-  //     }
-  // }
-  
-  //   useEffect(() => {
-  //   fetchData(url);
-  //     }, [url]);
-
   const { result: characters, error, loading } = useFetch('https://api.sampleapis.com/futurama/characters/', 'sc');
   const {user} = useContext(AuthContext);
 
@@ -47,7 +26,7 @@ function CharactersPage() {
           <div className="CardContainer">
         {characters && characters.map((character) => {
           return (
-            // <CharacterCard character={character} setShow={setShow} />
+       
             <Cards results={character} type={"character"} />
           )
         }

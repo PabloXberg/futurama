@@ -4,9 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 
-// const Card = ({ results }) => {
-
-
 function epiCards({ results }) {
 
 
@@ -20,22 +17,12 @@ function epiCards({ results }) {
           >
       <Card style={{ width: '18rem' }}>
        
-      <Card.Body className="">
-        <Card.Title>{`${results.title}`}</Card.Title>
-          <Card.Subtitle>
-            {`Writers: ${results.writers}`}                       
-          </Card.Subtitle><br/>
-           <Card.Text>
-            {`Description: ${results.desc}`}                         
-          </Card.Text>
-           <Card.Header>
-            {`Air Date: ${results.originalAirDate}`}
-          </Card.Header>
-           <Card.Footer>
-            {`Number: ${results.number}`}
-          </Card.Footer>
-     
-      </Card.Body>
+          <Card.Body className="">
+              <Card.Subtitle>{`Writers: ${results.writers}`}</Card.Subtitle><br/>
+              <Card.Text>{`Description: ${results.desc}`}</Card.Text>
+              <Card.Header>{`Air Date: ${results.originalAirDate}`}</Card.Header>
+              <Card.Footer>{`Number: ${results.number}`}</Card.Footer>
+          </Card.Body>
       </Card>
 
     </Link>

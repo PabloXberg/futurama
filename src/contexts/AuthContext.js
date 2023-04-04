@@ -15,19 +15,15 @@ export const AuthContextProvider = (props) => {
         // Signed in 
         const newUser = userCredential.user;
         console.log(newUser);
-        <Alert key={"warning"} variant={"warning"}>
-          Sign up successful - now please log in
-        </Alert>
+        Alert("Sign up successful - now please log in")
+               
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorMessage);
-          < Alert key = { "danger" } variant = { "danger" } >
-            {errorCode}
-           {errorMessage} 
-        </Alert>
-      });
+          Alert (errorCode,errorMessage) 
+             });
   }
 
   const logIn = (email, password) => {
@@ -36,9 +32,8 @@ export const AuthContextProvider = (props) => {
         // Signed in 
         const loggedUser = userCredential.user;
         setUser(loggedUser);
-         <Alert key={"success"} variant={"success"}>
-          Login Successful! 
-        </Alert>
+        Alert("Login successful!")
+        window.location.href = ("/Show");
       })
       .catch((error) => {
         const errorCode = error.code;

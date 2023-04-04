@@ -4,12 +4,14 @@ import LogForm from '../components/LogForm'
 function Login() {
 
   return (
-    <div>
-      <h1>Register</h1>
-      <LogForm functionType={"register"} />
+    <div className="quizBody">
+      <div className='quizApp'>
+        <h1>Register</h1>
+        <LogForm functionType={"register"} />
 
-      <h1>Login</h1>
-      <LogForm functionType={"login"}/>
+        <h1>Login</h1>
+        <LogForm functionType={"login"}/>
+      </div>
     </div>
   )
 }

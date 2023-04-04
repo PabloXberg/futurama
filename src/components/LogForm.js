@@ -6,10 +6,6 @@ function LogForm({ functionType }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value)
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (functionType === "register") {
@@ -25,10 +21,10 @@ function LogForm({ functionType }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1em", alignItems: "flex-start" }}>
-      <input placeholder='email' value={email} onChange={handleEmailChange} type='email'/>
+    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1em", alignItems: "center" }}>
+      <input placeholder='email' value={email} onChange={(event) => setEmail(event.target.value)} type='email'/>
       <input type='password' placeholder='password' value={password} onChange={(event) => setPassword(event.target.value)} />
-      <button type='submit'>Submit</button>
+      <button type='submit'>Accept</button>
     </form>
   )
 }
