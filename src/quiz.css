@@ -130,3 +130,26 @@
 .juego-terminado button svg {
     margin-right: 5px;
 }
+
+
+.tablamail{
+    border: solid 3px red;
+    width: 70%;
+    flex-direction: flex-start;
+}
+.tablascore {
+    border: solid 3px red;
+    width: 15%;
+text-align: center;
+}
+.tablagames {
+    border: solid 3px red;
+    width: 15%;
+text-align: center;
+}
+
+.tablademierda{
+    display: flex;
+    flex-direction: row;
+    
+}

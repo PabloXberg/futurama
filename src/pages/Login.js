@@ -1,5 +1,6 @@
 import React from 'react'
 import LogForm from '../components/LogForm'
+import '../quiz.css'
 
 function Login() {
 

@@ -1,7 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import { auth } from '../fbConfig'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
-import Alert from 'react-bootstrap/Alert';
+
+
 
 export const AuthContext = createContext();
 
@@ -15,14 +16,14 @@ export const AuthContextProvider = (props) => {
         // Signed in 
         const newUser = userCredential.user;
         console.log(newUser);
-        Alert("Sign up successful - now please log in")
+        alert("Sign up successful - now please log in")
                
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorMessage);
-          Alert (errorCode,errorMessage) 
+          alert (errorCode,errorMessage) 
              });
   }
 
@@ -32,8 +33,8 @@ export const AuthContextProvider = (props) => {
         // Signed in 
         const loggedUser = userCredential.user;
         setUser(loggedUser);
-        Alert("Login successful!")
-        window.location.href = ("/Show");
+        alert("Login successful!")
+        window.location.href = ("/Quiz");
       })
       .catch((error) => {
         const errorCode = error.code;
