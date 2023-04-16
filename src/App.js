@@ -4,12 +4,14 @@ import Homepage from './Homepage'
 import Error404 from './pages/Error404'
 import NavBar from './components/NavBar'
 import Quiz from './pages/Quiz'
+import CharDetails from './pages/CharDetails'
 
 import { AuthContextProvider } from './contexts/AuthContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import Login from './pages/Login'
 import Chat from './pages/Chat'
 import TablaPuntos from './pages/TablaPuntos'
+import CharactersPage from './pages/CharactersPage'
 
 function App() {
 
@@ -19,7 +21,7 @@ function App() {
         <NavBar />
         <Routes>
 
-          <Route path='/' element={ <Homepage /> } />
+          <Route path='/' element={ <CharactersPage/> } />
           <Route path='*' element={<Error404 />} />
           
     
@@ -28,7 +30,7 @@ function App() {
                 <Route path='/Quiz/Chat' element={ <Chat/> } />
           </Route>
 
-          {/* <Route path='details/:id' element={ <ProtectedRoute><CharDetails /></ProtectedRoute> } /> */}
+          <Route path='details/:id' element={ <ProtectedRoute>  <CharDetails /></ProtectedRoute> } />
 
           <Route path='login' element={ <Login /> } />
 

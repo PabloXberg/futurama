@@ -15,9 +15,10 @@ function TheQuiz() {
   const [vidas, setVidas] = useState(2);
   const [tiemporestante, setTiempoRestante] = useState(20);
   const [aredisabled, setAreDisabled] = useState(false);
-  const [buttonStyle, setButtonStyle] = useState("");
+  const [buttonStyle, setButtonStyle] = useState("correcto");
   const [userData, setUserData] = useState("");
   const [newHighScore, setNewHighScore] = useState(0);
+ 
   
   const preguntas = characters;
   
@@ -71,8 +72,8 @@ function TheQuiz() {
     const newDocument = {
       author: user.email,
       higherscore: newHighScore,
-      numberofgames: userData.numberofgames + 1 
-    }
+      numberofgames: userData.numberofgames ? userData.numberofgames + 1 : 1
+    } 
     console.log('newDocument :>> ', newDocument);
     // Add a new document in collection "users"
     await setDoc(doc(db, "users", `user_${user.uid}`), newDocument);
@@ -81,6 +82,9 @@ function TheQuiz() {
 
   useEffect(() => {
     readData();
+    console.log('puntuacion :>> ', puntuacion);
+    console.log('newHighScore :>> ', newHighScore);
+
     console.log('userData.higherscore :>> ', userData.higherscore);
     if (userData.higherscore>puntuacion) {
       setNewHighScore(userData.higherscore);
@@ -123,7 +127,7 @@ function TheQuiz() {
  
  
   return (
-    <div className='quizBody'>
+    <div className='quizBody backgroundimagen'>
       <div className="quizApp">
         <div className="lado-izquierdo">
 

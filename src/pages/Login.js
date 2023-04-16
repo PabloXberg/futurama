@@ -5,7 +5,7 @@ import '../quiz.css'
 function Login() {
 
   return (
-    <div className="quizBody">
+    <div className="quizBody backgroundimagen">
       <div className='quizApp'>
         <h1>Register</h1>
         <LogForm functionType={"register"} />

@@ -4,7 +4,8 @@ import { Outlet, useLocation } from 'react-router-dom'
 import useFetch from '../src/hooks/useFetch';
 import CarouselSlide from '../src/components/CarouselSlide';
 
-function Homepage() {
+function
+  Homepage() {
   const location = useLocation();
   const { result: characters, error, loading } = useFetch('https://api.sampleapis.com/futurama/info', 'sc');
 

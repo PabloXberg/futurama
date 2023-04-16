@@ -57,7 +57,8 @@ function TablaPuntos() {
   // const handleOnChange = (e) => setInputValue(e.target.value)
 
   return (
-    <div >
+    <div className='backgroundimagen'>
+      <div>
       <div className='tablademierda'>
 
       <div className='tablamail'><h3>Users</h3></div> <div className='tablagames'><h3>Games</h3> </div> 
@@ -65,7 +66,8 @@ function TablaPuntos() {
       </div>
       
         <div>
-        {/* {console.log('users :>> ', users)} */}
+        {/* {console.log('users :>> ', users)} */}"test@t..."
+        
         { users.map((user) => {
           return (
             <div>
@@ -79,6 +81,7 @@ function TablaPuntos() {
         <textarea value={inputValue} onChange={handleOnChange}/>
         <button type='submit'>Send</button>
       </form> */}
+    </div>
     </div>
   )
 }

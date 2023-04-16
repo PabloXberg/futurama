@@ -93,7 +93,7 @@ function Chat() {
 
   const handleOnChange = (e) => setInputValue(e.target.value)
   return (
-    <div>
+    <div className='backgroundimagen'>
 
       <div>
         { messages.map((message) => {
@@ -103,7 +103,7 @@ function Chat() {
         }) }
       </div>
       <form style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "1em" }} onSubmit={handleSubmitAddDoc}>
-        <textarea style={{width: "100%", height:"5rem", }} placeholder="Write a new message..." value={inputValue} onChange={handleOnChange}/>
+        <textarea style={{ display: "flex",  alignItems: "flex-end", gap: "1em", width: "65%", height:"5rem", }} placeholder="Write a new message..." value={inputValue} onChange={handleOnChange}/>
         <button type='submit'>Send</button>
       </form>
     </div>

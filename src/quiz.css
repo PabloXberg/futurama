@@ -1,28 +1,31 @@
+
 .quizBody {
     margin: 0;
     color: #fff;
     background-color: #000000;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     min-height: 100vh;
 }
 
 .quizApp {
-    background-color: #252d4a;
+    background-color: black;
     max-width: 90rem;
     min-width: 70rem;
     height: min-content;
-    min-height: 200px;
+    min-height: 300px;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
     display: flex;
-    justify-content: space-evenly;
+    justify-content:center;
+    align-items: center;
 }
 
 /* PREGUNTAS */
 .lado-izquierdo {
+    font-size: 22px;
     width: 100%;
     position: relative;
     display: flex;
@@ -62,21 +65,21 @@
 /* GRAL */
 .lado-derecho button {
     width: 100%;
-    font-size: 16px;
+    font-size: 22px;
     color: #ffffff;
-    background-color: #252d4a;
+    background-color: #707a9d;
     border-radius: 15px;
     display: flex;
     padding: 5px;
     justify-content: flex-start;
     align-items: center;
-    border: 5px solid #234668;
+    border: 5px solid #33383c;
     cursor: pointer;
 }
 
 .tiempo-restante {
     font-size: 14px;
-    color: #fcbf3d;
+    color: orangered;
     margin-bottom: 20px;
 }
 
@@ -133,23 +136,33 @@
 
 
 .tablamail{
-    border: solid 3px red;
+    /* border: solid 3px white; */
     width: 70%;
     flex-direction: flex-start;
+    color: #fcfcfc;
 }
 .tablascore {
-    border: solid 3px red;
+    /* border: solid 3px white; */
     width: 15%;
 text-align: center;
+    color: #fcfcfc;
 }
 .tablagames {
-    border: solid 3px red;
+    /* border: solid 3px white; */
     width: 15%;
 text-align: center;
+    color: #fcfcfc;
 }
 
 .tablademierda{
     display: flex;
     flex-direction: row;
     
+}
+
+.backgroundimagen {
+    background-image: url('/src/images/background.jpg');
+    /* Ajustar el tamaño y posición de la imagen */
+    background-size: cover;
+    background-position: center;
 }

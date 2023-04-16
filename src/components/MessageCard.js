@@ -7,7 +7,7 @@ function MessageCard({ message }) {
   }
   const emailname = message.author.slice(0, 5);
   return (
-    <div style={{ border: "solid black 1px" }}>
+    <div className='tablamail' style={{border: 'solid 1px white', width: '35%'}}>
  
           <p><i>Posted by: <strong>"{emailname}..."</strong> on {formatDate(message.date)}</i></p>
       <p><strong>{message.message}</strong></p>

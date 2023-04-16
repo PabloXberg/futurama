@@ -10,12 +10,12 @@ function Quiz() {
 
 
   return (
-
+<div >
     <div>
       {location.pathname === "/Quiz/tablaPuntos" ||location.pathname === "/Quiz/Chat" ? <Outlet /> :  <TheQuiz />}
      
     
-      
+      </div>
     </div>
   )
 }
